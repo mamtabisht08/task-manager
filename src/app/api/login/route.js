@@ -9,7 +9,7 @@ export async function POST(request) {
 
   try {
     // 1.get user
-    const user = await User.findOne({
+    const user = await User.find({
       email: email,
     });
 
