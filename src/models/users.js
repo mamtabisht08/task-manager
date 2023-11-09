@@ -2,17 +2,18 @@ import mongoose, { Schema } from "mongoose"
 
 const UserSachema = new Schema({
     name: String,
-    email:{
-        type:String,
+    email: {
+        type: String,
         unique: true,
-        required:true
+        required: true,
+        index: true,
     },
     password: {
         type: String,
         require: [true, "Password Required !!"],
-      },
-      about: String,
-      profileURL: String,
+    },
+    about: String,
+    profileURL: String,
 
 
 
