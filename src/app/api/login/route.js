@@ -13,7 +13,7 @@ export async function POST(request) {
       email: email,
     });
 
-    if (user == null) {
+    if (!user || user.length === 0) {
       throw new Error("user not found !!");
     }
 
